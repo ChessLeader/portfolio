@@ -1,0 +1,8 @@
+$padding: 8px;
+$fontSize: 8px;
+$backgroundColor: #F1F1F1;
+
+@mixin container {
+  max-width: 1230px;
+  margin: 0 auto;
+}
