@@ -7,7 +7,7 @@
           <ul class="nav_list">
             <li class="nav_item"><a href="#">Home</a></li>
             <li class="nav_item"><a href="#">Projects</a></li>
-            <li class="nav_item"><a href="#">Contacts</a></li>
+            <li class="nav_item"><a href="№">Contacts</a></li>
           </ul>
         </div>
       </div>

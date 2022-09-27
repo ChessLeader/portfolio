@@ -13,7 +13,7 @@
           <p>Vuex</p>
           <p>Vuetify</p>
           <p>Angular</p>
-          <p>NestJs</p>
+          <p>Express</p>
           <p>JQuery</p>
           <p>SCSS</p>
           <p>Axios</p>

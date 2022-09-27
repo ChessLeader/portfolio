@@ -2,7 +2,7 @@
   <div class="contacts_wrapper">
     <div class="container">
       <div id="observerMap" ref="observer"></div>
-      <div class="contacts">
+      <div id="contacts" class="contacts">
         <div class="about_form">
           <div class="about_me" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="1500">
             <h4>About me</h4>

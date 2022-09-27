@@ -3,19 +3,55 @@
     <div class="my_form">
       <h4>Write my</h4>
     </div>
-    <input class="input" type="text" placeholder="Name...">
-    <input class="input" type="text" placeholder="Email...">
-    <input class="input" type="text" placeholder="Subject...">
-    <input class="input" type="text" placeholder="Message..."/>
+    <input class="input" v-model="name" type="text" placeholder="Name...">
+    <input class="input" v-model="surname" type="text" placeholder="Surname...">
+    <input class="input" v-model="email" type="email" placeholder="Email...">
+    <input class="input" v-model="text" type="text" placeholder="Message..."/>
     <div class="btn">
-      <button>Send</button>
+      <button @click="createMessage" type="submit">Send</button>
     </div>
   </form>
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'my-form'
+  name: 'my-form',
+  data() {
+    return {
+        messages: [],
+        name: '',
+        surname: '',
+        email: '',
+        text: ''
+    }
+  },
+  methods: {
+    async getMessages() {
+      try {
+        const response = await axios.get('http://localhost:80/messages')
+        this.messages = response.data
+      } catch (err) {
+        console.log(err)
+      }
+    },
+    async createMessage() {
+      try {
+        await axios.post('http://localhost:80/messages', {
+          user_name: this.name,
+          user_lastname: this.surname,
+          user_email: this.email,
+          user_text: this.text
+        })
+        this.name = ''
+        this.surname = ''
+        this.email = ''
+        this.text = ''
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
 }
 </script>
 
