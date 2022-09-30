@@ -21,49 +21,52 @@
         <div class="projects">
           <h3 data-aos="fade-left" data-aos-duration="1500">My projects</h3>
           <div class="my_projects">
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
+              <img src="@/assets/img/projects/angular-shop.png">
               <div class="mask">
-                <h4>Shopping cart</h4>
-                <p>Technologies used Vue 3 and Vuex</p>
-                <a href="#" class="info">See code</a>
+                <h4>Online shop</h4>
+                <p>Technologies used Angular 13 and Angular Material</p>
+                <a target="_blank" href="https://gitlab.com/respectk/angular-shop" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
+              <img src="@/assets/img/projects/vue3.png" alt="Vue3">
               <div class="mask">
-                <h4>Shopping cart</h4>
-                <p>Technologies used Vue 3 and Vuex</p>
-                <a href="#" class="info">See code</a>
+                <h4>Posting app</h4>
+                <p>Technologies used Vue 3 and Axios</p>
+                <a target="_blank" href="https://gitlab.com/respectk/vuepostsproect" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
               <img src="@/assets/img/projects/shop.png">
               <div class="mask">
                 <h4>Shopping cart</h4>
                 <p>Technologies used Vue 3 and Vuex</p>
-                <a href="#" class="info">See code</a>
+                <a target="_blank" href="https://gitlab.com/respectk/vuepostsproect" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
               <img src="@/assets/img/projects/portfolio.png">
               <div class="mask">
                 <h4>Portfolio</h4>
-                <p>Technologies used Vue 3 and Vuex</p>
-                <a href="#" class="info">See code</a>
+                <p>Technologies used Vue 3, Axios, Express and MySQL</p>
+                <a target="_blank" href="https://github.com/ChessLeader/portfolio" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
+              <img src="@/assets/img/projects/nodejs.png">
               <div class="mask">
-                <h4>Shopping cart</h4>
-                <p>Technologies used Vue 3 and Vuex</p>
-                <a href="#" class="info">See code</a>
+                <h4>REST API</h4>
+                <p>Communication example client-database.NodeJs,Express js, MySQL</p>
+                <a target="_blank" href="https://gitlab.com/respectk/restapi-node-express-mysql" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000">
+            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
               <img src="@/assets/img/projects/adaptive.png">
               <div class="mask">
                 <h4>Adaptive design</h4>
                 <p>Website page adapted to different screen widths</p>
-                <a href="#" class="info">See code</a>
+                <a target="_blank" href="https://gitlab.com/respectk/adaptive-design" class="info">See code</a>
               </div>
             </div>
           </div>

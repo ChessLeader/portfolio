@@ -21,6 +21,9 @@
           <div class="my_residence" data-aos="fade-down-left" data-aos-duration="2000">
             <h4>Poland, Pomorskie ,Gdynia, 81-649</h4>
           </div>
+          <div v-show="showGeolocation" class="geolocation">
+            <img src="@/assets/img/geolocation/geo.png">
+          </div>
           <div class="map_wrapper">
             <MyMapSvg/>
           </div>
@@ -43,6 +46,11 @@ import AnimationSVG from "@/assets/animations/svg/classSvg";
 export default {
   name: "my-contacts",
   components: {MyForm, MyMapSvg},
+  data() {
+    return {
+      showGeolocation: false
+    }
+  },
   methods: {
     showMap() {
       let animationSvg = new AnimationSVG()
@@ -109,12 +117,23 @@ export default {
 .my_residence h4 {
   font-size: $fontSize*4;
   font-weight: 700;
-}
+  }
 .map {
+  position: relative;
   width: 1000px;
-}
+  }
 .map_wrapper {
-  margin-top: 230px;
+  margin-top: 180px;
+}
+.geolocation {
+  position: absolute;
+  left: 51%;
+  top: 410px;
+  width: 20px;
+}
+.geolocation img {
+  width: 100%;
+  height: auto;
 }
 footer {
   width: 100%;
@@ -133,7 +152,51 @@ footer {
     width: 250px;
   }
 }
+@media  screen and (max-width: 1200px) {
+  .geolocation {
+  position: absolute;
+  left: 52%;
+  top: 405px;
+  width: 20px;
+}
+}
+ @media  screen and (max-width: 1160px) {
+  .geolocation {
+  position: absolute;
+  left: 52%;
+  top: 400px;
+  width: 20px;
+  }
+}
+ @media  screen and (max-width: 1130px) {
+  .geolocation {
+  position: absolute;
+  left: 52.5%;
+  top: 390px;
+  width: 20px;
+  }
+ }
+ @media  screen and (max-width: 1075px) {
+  .geolocation {
+  position: absolute;
+  left: 53%;
+  top: 380px;
+  width: 20px;
+  }
+ }
+ @media  screen and (max-width: 1050px) {
+  .geolocation {
+  position: absolute;
+  left: 54%;
+  top: 375px;
+  width: 20px;
+  }
+ }
+
 @media  screen and (max-width: 1000px){
+  .geolocation {
+    display: none;
+  }
   .about_me h4, .my_residence h4 {
     font-size: $fontSize*3;
     margin-left: 30px;

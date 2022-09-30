@@ -1,8 +1,6 @@
 <template>
   <my-header/>
-  <my-portfolio/>
-  <my-skills-img/>
-  <my-contacts/>
+  
 </template>
 
 <script>
@@ -19,6 +17,9 @@
 <style>
 @import "@/assets/styles/reset.css";
 @import "@/assets/fonts/fonts.css";
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Poppins, sans-serif;
 }
