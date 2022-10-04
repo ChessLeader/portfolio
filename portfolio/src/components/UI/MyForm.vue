@@ -3,12 +3,12 @@
     <div class="my_form">
       <h4>Write my</h4>
     </div>
-    <input class="input" v-model="name" type="text" placeholder="Name...">
-    <input class="input" v-model="surname" type="text" placeholder="Surname...">
+    <input class="input" v-model.trim="name" type="text" placeholder="Name...">
+    <input class="input" v-model.trim="surname" type="text" placeholder="Surname...">
     <input class="input" v-model="email" type="email" placeholder="Email...">
     <textarea rows="6" cols="80" class="input" v-model="text" type="text" placeholder="Message..."></textarea>
     <div class="btn">
-      <button @click="postMessage" type="submit">Send</button>
+      <button @click="postAjax" type="submit">Send</button>
     </div>
     <p v-show="showMessage">Thank you for writing to me!<br> I will answer you soon.<br> Regards, Andrii!</p>
   </form>
@@ -17,6 +17,8 @@
 
 <script>
 import axios from 'axios'
+import $ from 'jquery'
+
 export default {
   name: 'my-form',
   data() {
@@ -30,24 +32,47 @@ export default {
     }
   },
   methods: {
+    postAjax() {
+      $.post(
+          'https://146.59.70.220:3000/messages',
+          {
+            user_name: this.name,
+            user_lastname: this.surname,
+            user_email: this.email,
+            user_text: this.text
+          },
+          function (data) {
+            console.log(data)
+          }
+      )
+    },
     async postMessage() {
-      await axios.post('http://localhost:80/messages', {
+      await axios.post('http://localhost:3000/messages', {
         user_name: this.name,
         user_lastname: this.surname,
         user_email: this.email,
         user_text: this.text
       })
-          .then((request) => {
-            if(request.status == 200) {
-              this.showMessage = true
-            }
+          .then((response) => {
+            console.log(response)
+
             this.name = this.surname = this.email = this.text = ''
           })
-          .catch((err) => console.log(err))
+          .catch((error) => {
+            if(error.response) {
+              console.log(error.response.data)
+              console.log(error.response.status)
+              console.log(error.response.headers)
+            } else if (error.request) {
+              console.log(error.request)
+            } else {
+              console.log('Error', error.message)
+            }
+          })
     },
     async getMessages() {
       try {
-        const response = await axios.get('http://localhost:80/messages')
+        const response = await axios.get('http://localhost:3000/messages')
         this.messages = response.data
       } catch (err) {
         console.log(err)
@@ -55,7 +80,7 @@ export default {
     },
     async createMessage() {
       try {
-        await axios.post('http://localhost:80/messages', {
+        await axios.post('http://localhost:3000/messages', {
           user_name: this.name,
           user_lastname: this.surname,
           user_email: this.email,
@@ -103,7 +128,6 @@ h4 {
   border: 1px solid black;
   padding: 10px 15px;
   text-transform: uppercase;
-  font-weight: bold;
   transition: .5s;
   overflow: hidden;
 }
