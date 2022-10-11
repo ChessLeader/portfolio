@@ -4,7 +4,7 @@
       <div id="observerMap" ref="observer"></div>
       <div id="contacts" class="contacts">
         <div class="about_form">
-          <div class="about_me" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+          <div class="about_me" data-aos-once="true" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="1500">
             <h4>About me</h4>
               <p>workable</p>
               <p>purposeful</p>
@@ -13,12 +13,12 @@
               <p>teamwork skills</p>
               <p>skill learns</p>
           </div>
-          <div class="my_form" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+          <div class="my_form" data-aos-once="true" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="1500">
             <my-form/>
           </div>
         </div>
         <div class="map">
-          <div class="my_residence" data-aos="fade-down-left" data-aos-duration="2000">
+          <div class="my_residence" data-aos-once="true" data-aos="fade-down-left" data-aos-duration="2000">
             <h4>Poland, Pomorskie ,Gdynia, 81-649</h4>
           </div>
           <div v-show="showGeolocation" class="geolocation">
@@ -30,7 +30,7 @@
 
         </div>
       </div>
-      <footer data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom">
+      <footer data-aos-once="true" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom">
         <p>2022, Andrii Kalinowski</p>
         <p>Personal area</p>
       </footer>
@@ -88,6 +88,7 @@ export default {
 }
 .about_me {
   margin-top: 100px;
+  margin-bottom: 60px;
   width: 280px;
   box-shadow: 2px 2px 2px 2px gray;
   text-align: center;
@@ -128,7 +129,7 @@ export default {
 .geolocation {
   position: absolute;
   left: 51%;
-  top: 410px;
+  top: 430px;
   width: 20px;
 }
 .geolocation img {
@@ -156,7 +157,7 @@ footer {
   .geolocation {
   position: absolute;
   left: 52%;
-  top: 405px;
+  top: 415px;
   width: 20px;
 }
 }
@@ -164,7 +165,7 @@ footer {
   .geolocation {
   position: absolute;
   left: 52%;
-  top: 400px;
+  top: 405px;
   width: 20px;
   }
 }
@@ -172,7 +173,7 @@ footer {
   .geolocation {
   position: absolute;
   left: 52.5%;
-  top: 390px;
+  top: 405px;
   width: 20px;
   }
  }
@@ -180,7 +181,7 @@ footer {
   .geolocation {
   position: absolute;
   left: 53%;
-  top: 380px;
+  top: 400px;
   width: 20px;
   }
  }
@@ -188,7 +189,7 @@ footer {
   .geolocation {
   position: absolute;
   left: 54%;
-  top: 375px;
+  top: 395px;
   width: 20px;
   }
  }

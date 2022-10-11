@@ -1,22 +1,22 @@
 <template>
   <div class="container">
     <div class="skills_row">
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/angular.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/css.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/figma.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/gimp.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/git.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/html.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/inkscape.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/jquery.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/js.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/nest.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/node.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/sass.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vc.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vue.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vuetify.png"></div>
-      <div class="skills_img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/ws.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/angular.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/css.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/figma.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/gimp.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/git.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/html.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/inkscape.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/jquery.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/js.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/nest.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/node.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/sass.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vc.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vue.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/vuetify.png"></div>
+      <div class="skills_img" data-aos-once="true" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-anchor-placement="bottom"><img src="@/assets/img/skills/ws.png"></div>
     </div>
   </div>
 </template>

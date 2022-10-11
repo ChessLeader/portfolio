@@ -1,15 +1,16 @@
 <template>
   <form action="" @submit.prevent>
     <div class="my_form">
-      <h4>Write my</h4>
+      <h4>Write me</h4>
     </div>
     <input class="input" v-model.trim="name" type="text" placeholder="Name...">
     <input class="input" v-model.trim="surname" type="text" placeholder="Surname...">
     <input class="input" v-model="email" type="email" placeholder="Email...">
     <textarea rows="6" cols="80" class="input" v-model="text" type="text" placeholder="Message..."></textarea>
     <div class="btn">
-      <button @click="postAjax" type="submit">Send</button>
+      <button @click="postMessage" type="submit">Send</button>
     </div>
+    <p style="color: red">Sorry. The server is temporality down.<br> Please write to <br>kalinowskiandrii@gmail.com</p>
     <p v-show="showMessage">Thank you for writing to me!<br> I will answer you soon.<br> Regards, Andrii!</p>
   </form>
 
@@ -34,7 +35,7 @@ export default {
   methods: {
     postAjax() {
       $.post(
-          'https://146.59.70.220:3000/messages',
+          'https://185.250.204.93:3000/messages',
           {
             user_name: this.name,
             user_lastname: this.surname,
@@ -101,7 +102,6 @@ export default {
 <style scoped lang="scss">
 @import "@/assets/styles/_variables.scss";
 form {
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   text-align: center;

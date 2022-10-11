@@ -2,7 +2,7 @@
   <div class="portfolio">
     <div class="container">
       <div class="skills_projects_wrapper">
-        <div class="skills" data-aos="fade-right" data-aos-duration="1500">
+        <div class="skills" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
           <h3>My skills</h3>
           <p>HTML</p>
           <p>CSS</p>
@@ -19,9 +19,9 @@
           <p>Axios</p>
         </div>
         <div class="projects">
-          <h3 data-aos="fade-left" data-aos-duration="1500">My projects</h3>
+          <h3 class="headingMyProjects" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">My projects</h3>
           <div class="my_projects">
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
+            <div v-show="showProjects.angular" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000" data-aos-once="true">
               <img src="@/assets/img/projects/angular-shop.png">
               <div class="mask">
                 <h4>Online shop</h4>
@@ -29,7 +29,7 @@
                 <a target="_blank" href="https://gitlab.com/respectk/angular-shop" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
+            <div v-show="showProjects.vue" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000" data-aos-once="true">
               <img src="@/assets/img/projects/vue3.png" alt="Vue3">
               <div class="mask">
                 <h4>Posting app</h4>
@@ -37,7 +37,7 @@
                 <a target="_blank" href="https://gitlab.com/respectk/vuepostsproect" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000">
+            <div v-show="showProjects.vue" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="1000" data-aos-once="true">
               <img src="@/assets/img/projects/shop.png">
               <div class="mask">
                 <h4>Shopping cart</h4>
@@ -45,7 +45,7 @@
                 <a target="_blank" href="https://gitlab.com/respectk/vuepostsproect" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
+            <div v-show="showProjects.vue" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000" data-aos-once="true">
               <img src="@/assets/img/projects/portfolio.png">
               <div class="mask">
                 <h4>Portfolio</h4>
@@ -53,7 +53,7 @@
                 <a target="_blank" href="https://github.com/ChessLeader/portfolio" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
+            <div v-show="showProjects.express" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000" data-aos-once="true">
               <img src="@/assets/img/projects/nodejs.png">
               <div class="mask">
                 <h4>REST API</h4>
@@ -61,7 +61,7 @@
                 <a target="_blank" href="https://gitlab.com/respectk/restapi-node-express-mysql" class="info">See code</a>
               </div>
             </div>
-            <div class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000">
+            <div v-show="showProjects.html" class="my_projects_item my_projects_item_first" data-aos="fade-up" data-aos-anchor-placement="bottom" data-aos-duration="3000" data-aos-delay="2000" data-aos-once="true">
               <img src="@/assets/img/projects/adaptive.png">
               <div class="mask">
                 <h4>Adaptive design</h4>
@@ -71,14 +71,50 @@
             </div>
           </div>
         </div>
+        <div class="select">
+          <my-select
+              v-model="selectedProject"
+              :options="sortOptions"
+          ></my-select>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import MySelect from "@/components/UI/MySelect";
 export default {
-  name: 'my-portfolio'
+  name: 'my-portfolio',
+  components: {MySelect},
+  data() {
+    return {
+      selectedProject: '',
+      sortOptions: [
+        {value: 'projects', name:'All projects'},
+        {value: 'html', name: 'HTML-CSS'},
+        {value: 'vue', name: 'Vue 3'},
+        {value: 'angular' ,name: 'Angular'},
+        {value: 'express', name: 'Express js'},
+      ],
+      showProjects: {
+        vue: true,
+        angular: true,
+        express: true,
+        html: true
+      }
+    }
+  },
+  watch: {
+    selectedProject(newValue) {
+      if (newValue === 'vue') {this.showProjects = {vue: true, angular: false, express: false, html: false}}
+      if (newValue === 'html') {this.showProjects = {vue: false, angular: false, express: false, html: true}}
+      if (newValue === 'angular') {this.showProjects = {vue: false, angular: true, express: false, html: false}}
+      if (newValue === 'express') {this.showProjects = {vue: false, angular: false, express: true, html: false}}
+      if (newValue === 'projects') {this.showProjects = {vue: true, angular: true, express: true, html: true}}
+
+    }
+  }
 }
 </script>
 
@@ -92,13 +128,13 @@ export default {
   @include container
 }
 .skills_projects_wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
 .skills {
   width: 300px;
   margin: 150px 0 100px 5px;
-  //box-shadow: 2px 2px 2px grey;
   text-align: center;
 }
 h3 {
@@ -112,7 +148,7 @@ h3 {
   line-height: 2;
 }
 .projects {
-  max-width: 900px;
+  width: 900px;
   margin-top: 150px;
   text-align: center;
 }
@@ -130,6 +166,11 @@ h3 {
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+.select {
+  position: absolute;
+  top: 160px;
+  right: 20px;
 }
                                       //animation projects card
 
@@ -159,7 +200,9 @@ h3 {
   padding-top: 30px;
   color: #F1F1F1;
 }
-
+.my_projects_item a.info:hover {
+  color: red;
+}
 .my_projects_item img {
   display: block;
   position: relative;
@@ -204,11 +247,18 @@ h3 {
 .my_projects_item:hover a.info {
   transition-delay: 1s;
 }
+@media screen and (max-width: 1102px ){
+  .select {
+    top: 130px;
+  }
+}
 @media screen and (max-width: 1100px) {
   h3 {
     font-size: $fontSize*3.5;
     font-weight: 700;
     margin-bottom: 60px;
+  }
+  .skills {
   }
   .skills, .projects {
     margin-top: 80px;
@@ -220,9 +270,12 @@ h3 {
   }
 }
 @media screen and (max-width: 390px){
+  .select {
+    margin-top: 500px;
+  }
   .skills_projects_wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .skills {
     margin-bottom: 40px;
